@@ -1,0 +1,31 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+# Format
+format = '''
+$directory$git_branch$git_status$character'''
+
+right_format  = '''
+$cmd_duration$nodejs$all
+
+'''
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+[directory]
+format = '[$path](bold blue)[$read_only]($read_only_style) '
+truncation_length = 1
+use_os_path_sep = false
+
+[git_branch]
+format = 'on [$symbol$branch(:$remote_branch)](bold fg:214) '
+
+[git_status]
+style = 'bold fg:214'
+
+[cmd_duration]
+min_time = 0
+format = '[$duration](bold yellow) '
