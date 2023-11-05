@@ -24,3 +24,6 @@ alias cls='clear'
 alias vim='nvim'
 alias nv='nvim'
 alias nvconf='cd $HOME/.config/nvim/'
+
+# chezmoi
+alias dotfile='cd $HOME/.local/share/chezmoi/'
