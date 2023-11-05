@@ -3,6 +3,7 @@
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 plug "zap-zsh/nvm"
+plug "zap-zsh/vim"
 
 # >>> Local Plugin <<<
 plug "$HOME/.config/zsh/plugin/export.zsh"
@@ -14,5 +15,3 @@ bindkey '^l' autosuggest-accept
 # Load and initialise completion system
 autoload -Uz compinit
 compinit
-
-echo "chezmoi"
