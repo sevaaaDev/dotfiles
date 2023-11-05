@@ -1,0 +1,224 @@
+: 1698491095:0;zap
+: 1698491615:1;cd .config/zsh
+: 1698491641:0;.zshrc
+: 1698491685:0;mkdir plugin
+: 1698491700:0;touch aliases.zsh
+: 1698491715:0;touch export.zsh
+: 1698491720:113;nano export.zsh
+: 1698491884:23;nvim plugin/export.zsh
+: 1698492013:0;clear
+: 1698492285:0;free
+: 1698492291:0;free -m
+: 1698492307:0;df
+: 1698492309:0;df -h
+: 1698492362:0;fgrep
+: 1698492545:0;cd zsj
+: 1698494122:0;bindkey -l
+: 1698494138:0;bindkey .safe
+: 1698494159:0;bindkey -M .safe
+: 1698547543:0;cd zsh'
+: 1698546345:0;lsd -a
+: 1698546473:10;npm install -g alive-server
+: 1698546517:0;cd .nvm
+: 1698546531:1;cd versions
+: 1698546541:0;cd node/v20.9.0/bin
+: 1698546557:0;cat alive-server
+: 1698546570:0;cd node
+: 1698546584:0;mkdir test
+: 1698546596:0;touch index.html
+: 1698546842:157;alive-server
+: 1698548234:1;tree .
+: 1698548267:13;sudo apt install tree
+: 1698548321:0;tree -h
+: 1698548328:0;tree ?
+: 1698548377:0;tree -A
+: 1698548388:0;tree -Ah
+: 1698549482:0;pythonn
+: 1698549495:0;python
+: 1698549573:0;py
+: 1698549579:0;which python
+: 1698549663:65;python3
+: 1698549760:1;apt list | grep "python"
+: 1698549787:0;which python3
+: 1698549801:1;which python3.11
+: 1698549832:1;cd .config/zsh/
+: 1698557082:0;cd .ssh
+: 1698549919:0;source .zshrc
+: 1698550073:13;sudo apt install trash-cli
+: 1698550124:0;trash-put script.js
+: 1698550138:0;ls .local/share/Trash
+: 1698550149:1;cd .local/share/Trash
+: 1698550155:0;ls files
+: 1698550158:0;ls info
+: 1698550164:0;cat info/script.js.trashinfo
+: 1698550193:0;trash-put test
+: 1698550243:5;trash -l
+: 1698550253:0;trash-list
+: 1698550913:0;mkdir repos
+: 1698552048:0;echo $XDG_CONFIG_HOME
+: 1698552343:0;git config -list
+: 1698552348:0;git config --list
+: 1698552545:0;git config --global user.email 136947471+sevaaaDev@users.noreply.github.com
+: 1698552551:0;git config user.email
+: 1698552561:0;git config user.name 'sevaaa'
+: 1698552578:0;git config --global user.name 'sevaaa'
+: 1698552596:21;nvim .gitconfig
+: 1698553100:0;cp -r /mnt/c/Users/REDMI/.ssh ~/.ssh
+: 1698553108:0;la .ssh
+: 1698553158:0;chmod 600 ~/.ssh/id_ed25519
+: 1698553206:13;git clone git@github.com:sevaaaDev/test.git
+: 1698553228:0;cd tes
+: 1698553245:19;nvim README.md
+: 1698553267:3;gs
+: 1698553315:0;git commit -m 'test commit'
+: 1698555847:1132;nvim .bashrc
+: 1698556992:19;sudo apt install keychain
+: 1698557026:11;nvim .config/zsh/.zshrc
+: 1698557049:56;nvim .config/zsh/plugin/export.zsh
+: 1698557144:0;cd test
+: 1698557195:0;git commit -m 'another test'
+: 1698557204:3;git push
+: 1698561975:7;sudo ln -s "/mnt/c/Users/REDMI/scoop/apps/win32yank/current/win32yank.exe" "/usr/local/bin/win32yank.exe"
+: 1698562004:0;cd usr
+: 1698562117:0;lsd
+: 1698562657:22;nvim starship.toml
+: 1698562685:0;csl
+: 1698562749:0;trash-put .zshrc_2023-10-28_1698490169
+: 1698562761:0;cd .keychain
+: 1698562773:0;cat sheva7-csh
+: 1698562787:0;cat sheva7-sh
+: 1698562821:0;ls --tree
+: 1698584085:7;sudo trash-put win32yank.exe
+: 1698584286:7;sudo ls /usr/local/bin
+: 1698640418:0;cd .config/zsh/plugin
+: 1698640424:84;nvim aliases.zsh
+: 1698640517:0;source .config/zsh/.zshrc
+: 1698640536:2;apt list | grep "tree"
+: 1698640548:12;sudo apt remove tree
+: 1698640567:0;sudo apt autoremove
+: 1698640578:0;which treeview
+: 1698646627:0;tp test
+: 1698646636:0;mkdir playground
+: 1698647046:0;cd ~/.config/nvim
+: 1698647278:0;cd repos/p
+: 1698647678:39;nvim script.js
+: 1698648142:0;npm
+: 1698648183:0;npm list
+: 1698648220:1;npm list -g
+: 1698648478:12;sudo apt install unzip
+: 1698648498:0;unzip
+: 1698648664:4;nvim ,
+: 1698738045:0;mkdir mergeSort
+: 1698738056:0;touch script.js
+: 1698738070:0;mv script.js mergeSort.js
+: 1698738088:0;cd playground
+: 1698754007:0;tp .zsh_history
+: 1698754027:4;tree -a
+: 1698815791:0;zsh
+: 1698814716:0;type ls
+: 1698814720:0;type lsa
+: 1698814723:0;type gs
+: 1698814727:0;which ls
+: 1698814732:0;which gs
+: 1698814740:0;type gcl
+: 1698814743:0;gcl
+: 1698814747:0;gc
+: 1698814751:0;gcam
+: 1698815816:4;nvim .profile
+: 1698815823:0;echo $0
+: 1698815840:0;echo $PATH
+: 1698815868:0;ls
+: 1698815890:0;cd pl
+: 1698815892:0;cd plugin
+: 1698815900:2;nvim .ex
+: 1698815914:15;nvim export.zsh
+: 1698815960:0;cat sheva7-fish
+: 1698815981:0;cat .zshenv
+: 1698823379:0;cp /mnt/c/Users/REDMI/scoop/apps/neovim/current/bin/win32yank.exe /usr/local/bin/win32yank.exe
+: 1698823397:8;sudo cp /mnt/c/Users/REDMI/scoop/apps/neovim/current/bin/win32yank.exe /usr/local/bin/win32yank.exe
+: 1698823417:0;cd /usr/local/bin
+: 1698823747:0;cd mergeSort
+: 1698823755:215;nvim mergeSort.js
+: 1698837708:0;echo $TERM
+: 1698837966:0;cd repos
+: 1698837968:0;mkdir lua
+: 1698837970:0;cd lua
+: 1698837986:0;touch autopair.lua
+: 1698837990:190;nvim autopair.lua
+: 1698898330:0;lsa
+: 1698898338:0;ls .keychain
+: 1698898354:108;nvim
+: 1698900564:1;cd repos/playground
+: 1698917490:0;mkdir dev
+: 1698917499:0;mkdir local
+: 1698917537:0;mkdir LinkedList
+: 1698917539:0;cd LinkedList
+: 1698917548:0;touch linkedList.js
+: 1698917551:5;nvim linkedList.js
+: 1698917565:0;cd ./
+: 1698917595:0;mv repos dev/repos
+: 1698917785:0;cd lo
+: 1698917808:0;mkdir BinarySearchTree
+: 1698917823:0;touch BST.js
+: 1698932643:0;ls boot
+: 1698932647:0;la boot
+: 1698932652:0;cd boot
+: 1698932662:0;la dev
+: 1698932676:0;la lib
+: 1698933156:0;which bash
+: 1698933187:0;cat init
+: 1698933273:0;cd usr/local/bin
+: 1698933777:0;pwd
+: 1698933792:0;which zsh
+: 1698983666:0;which init
+: 1698983680:0;ll
+: 1698983690:0;cd sbin
+: 1698983703:0;ll | grep init
+: 1698983747:0;cd .
+: 1698983759:0;cd lib/systemd/
+: 1698983774:0;cd /
+: 1698983789:0;gzip
+: 1698983795:0;which gzip
+: 1698983807:0;which zip
+: 1698983817:2;apt search zip
+: 1698983836:31;sudo apt update
+: 1698983877:0;apt list --upgradable
+: 1698983887:23;sudo apt upgrade
+: 1698983974:22;node
+: 1698984010:0;cd d
+: 1699017587:0;cd .local
+: 1699017589:2;tree
+: 1699017605:0;cd share
+: 1699017618:0;cd bin
+: 1699017638:0;cd dotdotdots
+: 1699017651:0;cd ..
+: 1699017656:0;tp dotdotdots
+: 1699017705:0;git config --global init.defaultBranch main
+: 1699017740:0;tp .git
+: 1699017743:0;git init
+: 1699017752:0;lazygit
+: 1699017761:0;git add .
+: 1699017773:0;git commit -m 'init'
+: 1699017786:0;git log
+: 1699017812:0;cd dev
+: 1699017814:0;cd loc
+: 1699017817:0;cd local
+: 1699017820:0;cd BinarySearchTree
+: 1699017823:3654;nvim BST.js
+: 1699021632:0;cd .config/nvim
+: 1699021710:9;nvim .
+: 1699089168:0;cls
+: 1699095654:1;apt search stow
+: 1699165534:0;chezmoi add ~/.config/nvim
+: 1699165538:0;git status
+: 1699165570:0;cd dot_config
+: 1699165597:0;cd nvim
+: 1699165614:0;cd .config
+: 1699165619:0;cd zsh
+: 1699165620:0;la
+: 1699165623:0;cd .zshrc
+: 1699165627:5;nvim .zshrc
+: 1699165635:0;zap clean
+: 1699165640:0;zap list
+: 1699165667:0;cd
+: 1699165677:0;exit
