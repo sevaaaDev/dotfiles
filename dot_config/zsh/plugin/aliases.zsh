@@ -27,3 +27,6 @@ alias nvconf='cd $HOME/.config/nvim/'
 
 # chezmoi
 alias dotfile='cd $HOME/.local/share/chezmoi/'
+
+# lazygit
+alias lgit='lazygit'
