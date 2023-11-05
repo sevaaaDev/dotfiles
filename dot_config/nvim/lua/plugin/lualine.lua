@@ -34,28 +34,28 @@ function M.config()
 			z = { bg = colors.purple, fg = colors.black, gui = "bold" },
 		},
 		insert = {
-			a = { bg = colors.darkgray, fg = colors.blue, gui = "bold" },
+			a = { bg = colors.blue, fg = colors.darkgray, gui = "bold" },
 			b = { bg = colors.darkgray, fg = colors.blue },
 			c = { bg = colors.darkgray, fg = colors.white },
 			y = { bg = colors.lightgray, fg = colors.blue },
 			z = { bg = colors.blue, fg = colors.black, gui = "bold" },
 		},
 		visual = {
-			a = { bg = colors.darkgray, fg = colors.green, gui = "bold" },
+			a = { bg = colors.green, fg = colors.darkgray, gui = "bold" },
 			b = { bg = colors.darkgray, fg = colors.green },
 			c = { bg = colors.darkgray, fg = colors.white },
 			y = { bg = colors.lightgray, fg = colors.green },
 			z = { bg = colors.green, fg = colors.black, gui = "bold" },
 		},
 		replace = {
-			a = { bg = colors.darkgray, fg = colors.red, gui = "bold" },
+			a = { bg = colors.red, fg = colors.darkgray, gui = "bold" },
 			b = { bg = colors.darkgray, fg = colors.red },
 			c = { bg = colors.darkgray, fg = colors.white },
 			y = { bg = colors.lightgray, fg = colors.red },
 			z = { bg = colors.red, fg = colors.black, gui = "bold" },
 		},
 		command = {
-			a = { bg = colors.darkgray, fg = colors.gray, gui = "bold" },
+			a = { bg = colors.gray, fg = colors.darkgray, gui = "bold" },
 			b = { bg = colors.darkgray, fg = colors.gray },
 			c = { bg = colors.darkgray, fg = colors.white },
 			y = { bg = colors.lightgray, fg = colors.gray },
@@ -77,9 +77,13 @@ function M.config()
 		},
 		sections = {
 			lualine_a = {
-				{ "mode", icon = { "", align = "left" } },
+				{
+					"mode",
+					icon = { "", align = "left" },
+					separator = { left = "", right = "" },
+					padding = 0,
+				},
 			},
-			-- lualine_b = {'buffers'},
 			lualine_b = {
 				"branch",
 			},
@@ -88,7 +92,7 @@ function M.config()
 					"filename",
 					file_status = true, -- Displays file status (readonly status, modified status)
 					symbols = {
-						modified = "", -- Text to show when the file is modified.
+						modified = "●", -- Text to show when the file is modified.
 						readonly = "󰌾", -- Text to show when the file is non-modifiable or readonly.
 						unnamed = "[No Name]", -- Text to show for unnamed buffers.
 						newfile = "[New]", -- Text to show for newly created file before first write
@@ -97,21 +101,6 @@ function M.config()
 				"diagnostics",
 			},
 			lualine_x = { { "filetype", icon_only = true } },
-		},
-
-		winbar = {
-			lualine_c = { "buffers" },
-			lualine_x = {},
-			lualine_y = {},
-			lualine_z = {},
-		},
-		inactive_winbar = {
-			lualine_a = {},
-			lualine_b = {},
-			lualine_c = { "buffers" },
-			lualine_x = {},
-			lualine_y = {},
-			lualine_z = {},
 		},
 	})
 end
