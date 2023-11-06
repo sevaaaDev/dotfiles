@@ -29,3 +29,7 @@ style = 'bold fg:214'
 [cmd_duration]
 min_time = 0
 format = '[$duration](bold yellow) '
+
+[username]
+show_always = true
+format = '\[[$user]($style)\] '
