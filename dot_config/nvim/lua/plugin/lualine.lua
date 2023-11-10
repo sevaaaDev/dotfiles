@@ -88,17 +88,8 @@ function M.config()
 				"branch",
 			},
 			lualine_c = {
-				{
-					"filename",
-					file_status = true, -- Displays file status (readonly status, modified status)
-					symbols = {
-						modified = "●", -- Text to show when the file is modified.
-						readonly = "󰌾", -- Text to show when the file is non-modifiable or readonly.
-						unnamed = "[No Name]", -- Text to show for unnamed buffers.
-						newfile = "[New]", -- Text to show for newly created file before first write
-					},
-				},
 				"diagnostics",
+				"buffers",
 			},
 			lualine_x = { { "filetype", icon_only = true } },
 		},
