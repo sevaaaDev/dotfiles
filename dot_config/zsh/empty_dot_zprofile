@@ -1,0 +1,9 @@
+if [ -d "$HOME/.local/bin" ] ; then
+  PATH="$HOME/.local/bin/:$PATH"
+fi
+
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+  
+eval `keychain --eval --agents ssh id_ed25519`
