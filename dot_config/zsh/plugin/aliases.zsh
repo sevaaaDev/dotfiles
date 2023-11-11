@@ -33,3 +33,7 @@ alias dotfile='cd $HOME/.local/share/chezmoi/'
 
 # lazygit
 alias lgit='lazygit'
+
+# cat bat
+alias cat='batcat'
+alias bat='batcat'
