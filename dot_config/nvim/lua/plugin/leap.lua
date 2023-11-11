@@ -1,6 +1,7 @@
 local M = {
 	"ggandor/leap.nvim",
 	commit = "b6ae80f8fc9993638608fc1a51c6ab0eeb12618c",
+	enabled = false,
 }
 
 function M.config()
