@@ -36,3 +36,8 @@ format = '󱦟 [$duration](bold yellow) '
 show_always = true
 format = '[$user]($style)'
 style_user = 'bold green'
+
+[character]
+# success_symbol = "[\uf054](white)" # 
+vicmd_symbol = "[\ue62b](white)" # 
+error_symbol = "[\uf467](red)" # 
