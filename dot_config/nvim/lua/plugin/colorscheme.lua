@@ -32,7 +32,7 @@ function M.config()
 			frappe = {},
 			macchiato = {},
 			mocha = {
-				base = "#050515",
+				base = "#1e1e2e",
 				overlay0 = "#6e738d",
 				red = "#f67563",
 			},
