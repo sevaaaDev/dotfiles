@@ -73,6 +73,7 @@ function M.config()
 		vim.notify("Colorscheme not found")
 		return
 	end
+	vim.cmd([[:hi Normal guibg=none]])
 end
 
 return M
