@@ -6,7 +6,7 @@ plug "zap-zsh/nvm"
 plug "zap-zsh/vim"
 
 # >>> Local Plugin <<<
-plug "$HOME/.config/zsh/plugin/aliases.zsh"
+source $HOME/.config/zsh/plugin/aliases.zsh
 
 # >>> Keybind <<<
 bindkey '^l' autosuggest-accept 
