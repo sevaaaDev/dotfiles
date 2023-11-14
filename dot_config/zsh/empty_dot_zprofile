@@ -5,5 +5,7 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+source "$HOME/.config/zsh/plugin/export.zsh"
   
 eval `keychain --eval --agents ssh id_ed25519`
