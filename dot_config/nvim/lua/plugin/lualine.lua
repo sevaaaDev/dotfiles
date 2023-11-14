@@ -14,6 +14,7 @@ function M.config()
 		return
 	end
 	local colors = {
+		darkgray = "#1e1e2e",
 		black = "#1e1e2e",
 		white = "#cdd6f4",
 		red = "#f38ba8",
@@ -21,7 +22,6 @@ function M.config()
 		blue = "#74c7ec",
 		purple = "#ca9ee6",
 		gray = "#313244",
-		darkgray = "#050515",
 		lightgray = "#45475a",
 		inactivegray = "#7c6f64",
 	}
