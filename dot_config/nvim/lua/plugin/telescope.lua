@@ -40,10 +40,10 @@ function M.config()
 		},
 		pickers = {
 			find_files = {
-				theme = "dropdown",
+				theme = "ivy",
 			},
 			buffers = {
-				theme = "cursor",
+				theme = "ivy",
 			},
 		},
 		extensions = {
