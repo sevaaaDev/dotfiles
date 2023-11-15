@@ -9,18 +9,23 @@ local M = {
 			"nvim-telescope/telescope-fzf-native.nvim",
 			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 		},
-		{ "nvim-telescope/telescope-ui-select.nvim" },
+		{ "nvim-telescope/telescope-ui-select.nvim", commit = "0fc69ebbf178631b8ab76745459fade062156ec5" },
+		{ "debugloop/telescope-undo.nvim", commit = "13c33c173e53f14df7eec5155c52a3d2ab022d8d" },
 	},
 }
 
 function M.config()
+	require("telescope").load_extension("fzf")
+	require("telescope").load_extension("ui-select")
+	require("telescope").load_extension("undo")
 	local builtin = require("telescope.builtin")
 	vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "[F]ind [F]iles" })
-	vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+	vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "[F]ind using [G]rep" })
 	vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "[F]ind [H]elp" })
 	vim.keymap.set("n", "<leader>?", builtin.oldfiles, { desc = "[?] Find recently opened files" })
 	vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "[F]ind existing [B]uffers" })
 	vim.keymap.set("n", "<leader>gf", builtin.git_files, { desc = "Find [G]it [F]iles" })
+	vim.keymap.set("n", "<leader>u", ":Telescope undo theme=ivy<cr>", { desc = "[U]ndo Tree" })
 	local actions = require("telescope.actions")
 	local telescope = require("telescope")
 	telescope.setup({
@@ -69,10 +74,9 @@ function M.config()
 					-- }
 				}),
 			},
+			undo = {},
 		},
 	})
-	require("telescope").load_extension("fzf")
-	require("telescope").load_extension("ui-select")
 end
 
 return M
