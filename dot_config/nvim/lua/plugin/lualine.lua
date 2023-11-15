@@ -62,8 +62,8 @@ function M.config()
 			z = { bg = colors.gray, fg = colors.black, gui = "bold" },
 		},
 		inactive = {
-			a = { bg = colors.black, fg = colors.lightgray, gui = "bold" },
-			b = { bg = colors.black, fg = colors.lightgray },
+			a = { bg = colors.inactivegray, fg = colors.lightgray, gui = "bold" },
+			b = { bg = colors.inactivegray, fg = colors.lightgray },
 			c = { bg = colors.black, fg = colors.lightgray },
 		},
 	}
