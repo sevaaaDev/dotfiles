@@ -13,6 +13,15 @@ function M.config()
 	if not status_ok then
 		return
 	end
+	local function lspName()
+		local clients = vim.lsp.get_active_clients()
+		local clients_list = {}
+		for _, client in pairs(clients) do
+			table.insert(clients_list, client.name)
+		end
+		local name = table.concat(clients_list, ", ")
+		return name
+	end
 	local colors = {
 		darkgray = "#1e1e2e",
 		black = "#1e1e2e",
@@ -91,7 +100,7 @@ function M.config()
 				"diagnostics",
 				"buffers",
 			},
-			lualine_x = { { "filetype", icon_only = true } },
+			lualine_x = { lspName, { "filetype", icon_only = true } },
 		},
 	})
 end
