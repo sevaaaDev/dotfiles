@@ -1,12 +1,12 @@
-local opts = { noremap = true, silent = true }
-
+local function keymap(mode, lhs, rhs, opts)
+	opts = opts or {}
+	opts.noremap = true
+	opts.silent = true
+	vim.keymap.set(mode, lhs, rhs, opts)
+end
 local term_opts = { silent = true }
-
--- Shorten function name
-local keymap = vim.keymap.set
-
 --Remap space as leader key
-keymap("", "<Space>", "<Nop>", opts)
+keymap("", "<Space>", "<Nop>")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -24,43 +24,43 @@ vim.g.maplocalleader = " "
 -- keymap("n", "<C-k>", "<C-w>k", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>pv", ":Ex <cr>", opts)
+keymap("n", "<leader>pv", ":Ex <cr>", { desc = "Open netrw" })
 
-keymap("n", "<c-d>", "<c-d>zz", opts)
-keymap("n", "<c-u>", "<c-u>zz", opts)
+keymap("n", "<c-d>", "<c-d>zz", { desc = "down a half screen" })
+keymap("n", "<c-u>", "<c-u>zz", { desc = "up a half screen" })
 -- Navigating thru word wrapped line
 vim.keymap.set("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true })
 vim.keymap.set("n", "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize +2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Up>", ":resize +2<CR>", { desc = "resize up" })
+keymap("n", "<C-Down>", ":resize -2<CR>", { desc = "resize down" })
+keymap("n", "<C-Left>", ":vertical resize +2<CR>", { desc = "resize left" })
+keymap("n", "<C-Right>", ":vertical resize -2<CR>", { desc = "resize right" })
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", { desc = "go right buffers" })
+keymap("n", "<S-h>", ":bprevious<CR>", { desc = "go left buffers" })
 
 -- Delete buffers
-keymap("n", "<leader>bd", ":Bd<cr>", opts)
+keymap("n", "<leader>bd", ":Bd<cr>", { desc = "delete buffer" })
 
 -- Move text up and down
 -- keymap("n", "<space><c-j>", ":m .+1<CR>==", opts)
 -- keymap("n", "<c-k>", ":m .-2<CR>==", opts)
 
 -- Easy write file
-keymap("n", "<leader>w", ":w<cr>", opts)
+keymap("n", "<leader>w", ":w<cr>", { desc = "write" })
 
 -- Visual --
 -- Stay in indent mode
-keymap("v", "<", "<gv^", opts)
-keymap("v", ">", ">gv^", opts)
+keymap("v", "<", "<gv^")
+keymap("v", ">", ">gv^")
 
 -- Move text up and down
 -- keymap("v", "<c-J>", ":m '>+1<CR>gv=gv", opts)
 -- keymap("v", "<c-K>", ":m '<-2<CR>gv=gv", opts)
-keymap("v", "p", '"_dP', opts)
+keymap("v", "p", '"_dP', { desc = "dont take deleted word to register" })
 
 -- Visual Block --
 -- Move text up and down
