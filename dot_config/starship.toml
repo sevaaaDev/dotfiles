@@ -38,6 +38,6 @@ format = '[$user]($style)'
 style_user = 'bold green'
 
 [character]
-# success_symbol = "[\uf054](white)" # 
+success_symbol = "[>](bold green)" # 
 vicmd_symbol = "[\ue62b](white)" # 
-error_symbol = "[\uf467](red)" # 
+error_symbol = "[>](red)" # 
