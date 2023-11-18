@@ -6,6 +6,8 @@ local M = {
 			"<cmd>lua require('spider').motion('e')<CR>",
 			mode = { "n", "o", "x" },
 		},
+		"w",
+		"b",
 	},
 	commit = "a12b9e8189d09f1670e6b58b0eecf1cecb97e41c",
 }
