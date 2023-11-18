@@ -39,5 +39,5 @@ style_user = 'bold green'
 
 [character]
 success_symbol = '[\$](bold green)' # 
-vicmd_symbol = '[\ue62b](white)' # 
+vicmd_symbol = "[\ue62b](white)" # 
 error_symbol = '[\$](red)' # 
