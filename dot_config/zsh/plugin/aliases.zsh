@@ -9,7 +9,8 @@ alias lla='lsd -la'
 alias tree='lsd --tree'
 
 # cd
-alias bd='cd ..'
+# alias bd='cd ..'
+alias cd='cl'
 
 # dont fck up
 alias rm='rm -i'
