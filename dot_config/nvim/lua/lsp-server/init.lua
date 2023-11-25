@@ -6,6 +6,7 @@ M.servers = {
 	"html",
 	"tsserver",
 	-- "emmet_ls",
+	"bashls",
 }
 
 return M
