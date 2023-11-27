@@ -22,6 +22,10 @@ function M.config()
 		local name = table.concat(clients_list, ", ")
 		return name
 	end
+	local function buf()
+		local num = vim.fn.len(vim.fn.getbufinfo({ buflisted = 1 }))
+		return "BufOpn : " .. num
+	end
 	local colors = {
 		darkgray = "#1e1e2e",
 		black = "#1e1e2e",
@@ -97,10 +101,11 @@ function M.config()
 				"branch",
 			},
 			lualine_c = {
+				"filename",
+				{ "filetype", icon_only = true },
 				"diagnostics",
-				"buffers",
 			},
-			lualine_x = { lspName, { "filetype", icon_only = true } },
+			lualine_x = { buf, lspName },
 		},
 	})
 end
