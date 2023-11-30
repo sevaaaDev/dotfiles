@@ -22,6 +22,15 @@ function M.config()
 		local name = table.concat(clients_list, ", ")
 		return name
 	end
+	local function fmtname()
+		local fmts = require("conform").list_formatters()
+		local fmt_list = {}
+		for _, fmt in pairs(fmts) do
+			table.insert(fmt_list, fmt.name)
+		end
+		local name = table.concat(fmt_list, ", ")
+		return name
+	end
 	local function buf()
 		local num = vim.fn.len(vim.fn.getbufinfo({ buflisted = 1 }))
 		return "BufOpn : " .. num
@@ -105,7 +114,7 @@ function M.config()
 				{ "filetype", icon_only = true },
 				"diagnostics",
 			},
-			lualine_x = { buf, lspName },
+			lualine_x = { buf, fmtname, lspName },
 		},
 	})
 end
