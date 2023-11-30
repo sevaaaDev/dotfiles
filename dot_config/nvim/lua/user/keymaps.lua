@@ -24,6 +24,15 @@ vim.g.maplocalleader = " "
 -- keymap("n", "<C-k>", "<C-w>k", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- keymap("i", "/", function()
+-- 	if vim.o.filetype == "lua" then
+-- 		print("u are in lua")
+-- 		return "//<Left>"
+-- 	else                            -- cool feature
+-- 		print("u are not in lua")
+-- 	end
+-- end, { expr = true })
+
 keymap("n", "<leader>pv", ":Ex <cr>", { desc = "Open netrw" })
 
 keymap("n", "<c-d>", "<c-d>zz", { desc = "down a half screen" })
