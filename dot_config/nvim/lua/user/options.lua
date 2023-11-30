@@ -38,6 +38,7 @@ vim.opt.guicursor =
 vim.opt.shortmess:append("c")
 vim.g.netrw_liststyle = 3
 vim.g.netrw_banner = 0
+vim.opt.laststatus = 3
 -- vim.cmd([[
 --     let g:clipboard = {
 --                 \   'name': 'WslClipboard',
