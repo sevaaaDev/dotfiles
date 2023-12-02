@@ -171,7 +171,9 @@ function M.config()
 		end,
 
 		update = { "DiagnosticChanged", "BufEnter" },
-
+		{
+			provider = " ",
+		},
 		{
 			provider = function(self)
 				-- 0 is just another output, we can decide to print it or not!
