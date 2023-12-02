@@ -2,7 +2,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 # Format
 format = '''
-$username[@WSL](bold green)[:](bold #ffffff)$directory$git_branch$git_status$character'''
+$username[@WSL](bold #74c7ec)[:](bold #ffffff)$directory$git_branch$git_status$character'''
 
 right_format  = '''
 $cmd_duration$nodejs$all
@@ -16,13 +16,13 @@ add_newline = false
 disabled = true
 
 [directory]
-format = '[$path](bold blue)[$read_only]($read_only_style)'
-truncation_length = 5
+format = '[$path](bold #f38ba8)[$read_only]($read_only_style)'
+truncation_length = 3
 truncation_symbol = '../'
 use_os_path_sep = false
 
 [git_branch]
-format = ' on [$symbol$branch(:$remote_branch)](bold fg:214) '
+format = ' on [$symbol$branch(:$remote_branch)](bold fg:214)'
 symbol = ' '
 
 [git_status]
@@ -35,9 +35,9 @@ format = '󱦟 [$duration](bold yellow) '
 [username]
 show_always = true
 format = '[$user]($style)'
-style_user = 'bold green'
+style_user = 'bold #74c7ec'
 
 [character]
-success_symbol = '[\$](bold green)' # 
+# success_symbol = '[\$](bold green)' # 
 vicmd_symbol = "[\ue62b](white)" # 
-error_symbol = '[\$](red)' # 
+# error_symbol = '[\$](red)' # 
