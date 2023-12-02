@@ -2,6 +2,7 @@ local M = {
 	"nvim-lualine/lualine.nvim",
 	commit = "45e27ca739c7be6c49e5496d14fcf45a303c3a63",
 	event = "BufEnter",
+	enabled = false,
 	dependencies = {
 		{ "nvim-tree/nvim-web-devicons", lazy = true, commit = "3af745113ea537f58c4b1573b64a429fefad9e07" },
 		{ "nvim-lua/plenary.nvim", lazy = true, commit = "50012918b2fc8357b87cff2a7f7f0446e47da174" },
