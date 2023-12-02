@@ -8,6 +8,7 @@ plug "zap-zsh/vim"
 # >>> Local Plugin <<<
 source $HOME/.config/zsh/plugin/aliases.zsh
 source $HOME/script/bettercd.sh
+source $HOME/script/bd.sh
 
 # >>> Keybind <<<
 bindkey '^l' autosuggest-accept 
