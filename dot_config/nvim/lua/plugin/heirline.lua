@@ -69,13 +69,29 @@ function M.config()
 				t = "brown",
 			},
 		},
-		provider = function(self)
-			return " %2(" .. self.mode_names[self.mode] .. "%) "
-		end,
-		hl = function(self)
-			local mode = self.mode:sub(1, 1) -- get only the first mode character
-			return { fg = "black", bg = self.mode_colors[mode], bold = true }
-		end,
+		{
+			provider = "",
+			hl = function(self)
+				local mode = self.mode:sub(1, 1) -- get only the first mode character
+				return { fg = self.mode_colors[mode], bold = true }
+			end,
+		},
+		{
+			provider = function(self)
+				return "%2(" .. self.mode_names[self.mode] .. "%)"
+			end,
+			hl = function(self)
+				local mode = self.mode:sub(1, 1) -- get only the first mode character
+				return { fg = "black", bg = self.mode_colors[mode], bold = true }
+			end,
+		},
+		{
+			provider = " ",
+			hl = function(self)
+				local mode = self.mode:sub(1, 1) -- get only the first mode character
+				return { fg = self.mode_colors[mode], bold = true }
+			end,
+		},
 		update = {
 			"ModeChanged",
 			pattern = "*:*",
@@ -89,12 +105,27 @@ function M.config()
 		init = function(self)
 			self.dict = vim.b.gitsigns_status_dict
 		end,
-		hl = {
-			fg = "#fab387",
+		{
+			provider = "",
+			hl = {
+				fg = "#fab387",
+			},
 		},
-		provider = function(self)
-			return "  " .. self.dict.head .. " "
-		end,
+		{
+			provider = function(self)
+				return " " .. self.dict.head
+			end,
+			hl = {
+				bg = "#fab387",
+				fg = "black",
+			},
+		},
+		{
+			provider = "",
+			hl = {
+				fg = "#fab387",
+			},
+		},
 	}
 	local Filename = {
 		provider = " %t",
@@ -115,7 +146,7 @@ function M.config()
 		provider = "%m",
 	}
 	local Percentage = {
-		provider = "%p%%",
+		provider = "%3p%%",
 	}
 	local LSPinfo = {
 		condition = conditions.lsp_attached,
@@ -216,6 +247,9 @@ function M.config()
 		Formatters,
 		LSPinfo,
 		Percentage,
+		hl = {
+			bg = "black",
+		},
 	}
 	local tabline = {
 		Divider,
