@@ -8,6 +8,15 @@ local M = {
 	-- enabled = false,
 }
 function M.config()
+	local colors = {
+		red = "#f38ba8",
+		mauve = "#cba6f7",
+		green = "#a6e3a1",
+		peach = "#fab387",
+		blue = "#89b4fa",
+		white = "#cdd6f4",
+		base = "#1e1e2e",
+	}
 	local utils = require("heirline.utils")
 	local conditions = require("heirline.conditions")
 	local ViMode = {
@@ -54,19 +63,19 @@ function M.config()
 				["t"] = "TERMINAL",
 			},
 			mode_colors = {
-				n = "#f38ba8",
-				i = "cyan",
-				v = "orange",
-				V = "orange",
-				["\22"] = "cyan",
-				c = "white",
-				s = "purple",
-				S = "purple",
-				["\19"] = "purple",
-				R = "orange",
-				r = "orange",
-				["!"] = "brown",
-				t = "brown",
+				n = colors.mauve,
+				i = colors.blue,
+				v = colors.green,
+				V = colors.green,
+				["\22"] = colors.green,
+				c = colors.white,
+				s = colors.mauve,
+				S = colors.mauve,
+				["\19"] = colors.mauve,
+				R = colors.red,
+				r = colors.red,
+				["!"] = colors.white,
+				t = colors.white,
 			},
 		},
 		{
@@ -108,7 +117,7 @@ function M.config()
 		{
 			provider = "",
 			hl = {
-				fg = "#fab387",
+				fg = colors.peach,
 			},
 		},
 		{
@@ -116,14 +125,14 @@ function M.config()
 				return " " .. self.dict.head
 			end,
 			hl = {
-				bg = "#fab387",
+				bg = colors.peach,
 				fg = "black",
 			},
 		},
 		{
 			provider = "",
 			hl = {
-				fg = "#fab387",
+				fg = colors.peach,
 			},
 		},
 	}
@@ -146,7 +155,25 @@ function M.config()
 		provider = "%m",
 	}
 	local Percentage = {
-		provider = "%3p%%",
+		{
+			provider = "",
+			hl = {
+				fg = colors.peach,
+			},
+		},
+		{
+			provider = "%3p%%",
+			hl = {
+				bg = colors.peach,
+				fg = "black",
+			},
+		},
+		{
+			provider = "",
+			hl = {
+				fg = colors.peach,
+			},
+		},
 	}
 	local LSPinfo = {
 		condition = conditions.lsp_attached,
@@ -159,7 +186,7 @@ function M.config()
 			local name = table.concat(clients_list, ", ")
 			return " [" .. name .. "] "
 		end,
-		hl = { fg = "#cba6f7" },
+		hl = { fg = colors.mauve },
 	}
 
 	local Formatters = {
@@ -171,6 +198,7 @@ function M.config()
 			end
 			return true
 		end,
+
 		provider = function(self)
 			local fmts = self.conform.list_formatters()
 			local fmt_list = {}
@@ -180,7 +208,8 @@ function M.config()
 			local name = table.concat(fmt_list, ", ")
 			return "󰛗 [" .. name .. "] "
 		end,
-		hl = { fg = "#a6e3a1" },
+
+		hl = { fg = colors.green },
 	}
 
 	local Diagnostics = {
@@ -210,25 +239,25 @@ function M.config()
 				-- 0 is just another output, we can decide to print it or not!
 				return self.errors > 0 and (self.error_icon .. self.errors .. " ")
 			end,
-			hl = { fg = "#f38ba8" },
+			hl = { fg = colors.red },
 		},
 		{
 			provider = function(self)
 				return self.warnings > 0 and (self.warn_icon .. self.warnings .. " ")
 			end,
-			hl = { fg = "#f9e2af" },
+			hl = { fg = colors.peach },
 		},
 		{
 			provider = function(self)
 				return self.info > 0 and (self.info_icon .. self.info .. " ")
 			end,
-			hl = { fg = "#89dceb" },
+			hl = { fg = colors.blue },
 		},
 		{
 			provider = function(self)
 				return self.hints > 0 and (self.hint_icon .. self.hints)
 			end,
-			hl = { fg = "#89dceb" },
+			hl = { fg = colors.blue },
 		},
 	}
 	local buf = {
@@ -248,7 +277,7 @@ function M.config()
 		LSPinfo,
 		Percentage,
 		hl = {
-			bg = "black",
+			bg = colors.base,
 		},
 	}
 	local tabline = {
