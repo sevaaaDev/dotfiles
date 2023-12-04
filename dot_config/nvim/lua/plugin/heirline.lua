@@ -283,6 +283,7 @@ function M.config()
 	local tabline = {
 		Divider,
 		buf,
+		Divider,
 	}
 	require("heirline").setup({
 		statusline = status,
